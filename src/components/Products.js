@@ -7,7 +7,7 @@ const items = [
     h4: "Planinarski dom na Malom polju",
     h5: "Informacije i cijene",
     image: "/dom.jpg",
-    link: "/dom",
+    link: "/infoPage",
   },
   {
     h4: "Škola planinarstva",
