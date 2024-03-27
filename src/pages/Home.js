@@ -20,14 +20,14 @@ function Home() {
       <Box id="banner">
         <Box class="bg-image"></Box>
         <Box class="bg-text">
-          <Typography variant="h4" style={{ fontSize: "25px" }}>
+          <Typography variant="h4">
             Ostvarite mnoge pogodnosti tako što ćete postati član našeg društva
           </Typography>
           <Button
             onClick={() => {
               setIsDialogOpen(true);
             }}
-            sx={{ marginTop: "15px", width: "20%" }}
+            sx={{ marginTop: "10px", width: "20%", fontSize: "5px" }}
           >
             Postani član
           </Button>

@@ -7,25 +7,25 @@ const items = [
     h4: "Planinarski dom na Malom polju",
     h5: "Informacije i cijene",
     image: "/dom.jpg",
-    link: "/infoPage",
+    link: "/dom",
   },
   {
     h4: "Škola planinarstva",
     h5: "Izleti za mlade planinare",
-    image: "/dom.jpg",
-    link: "/dom",
+    image: "/Skola/ispredDoma.jpg",
+    link: "/skola",
   },
   {
     h4: `Transferzala "Srebrna Lija" `,
     h5: "Visočica - Bjelašnica - Igman",
-    image: "/dom.jpg",
-    link: "/dom",
+    image: "/Lija/znacka.jpg",
+    link: "/srebrnalija",
   },
   {
     h4: "Susret planinara osnovaca",
     h5: "Poseban projekat za mlade",
-    image: "/dom.jpg",
-    link: "/dom",
+    image: "/Slet/susret.jpg",
+    link: "/slet",
   },
   {
     h4: `Historija društva `,
@@ -36,8 +36,8 @@ const items = [
   {
     h4: `Orijentiring `,
     h5: "Sport o kojem se malo zna",
-    image: "/dom.jpg",
-    link: "/dom",
+    image: "/Orijentiring/logo.jpg",
+    link: "/orijentiring",
   },
 ];
 

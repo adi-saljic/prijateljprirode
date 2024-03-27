@@ -32,7 +32,7 @@ const Footer = () => {
       </Box>
 
       {/* Right side icons */}
-      <Box mr={4} width="20%" display="flex" flexDirection="column">
+      <Box mr={4} display="flex" flexDirection="column">
         <Box display="flex">
           <IconButton onClick={() => handleIconClick("")}>
             <FacebookIcon />
