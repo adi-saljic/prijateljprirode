@@ -27,7 +27,6 @@ function Home() {
             onClick={() => {
               setIsDialogOpen(true);
             }}
-            sx={{ marginTop: "10px", width: "20%", fontSize: "5px" }}
           >
             Postani član
           </Button>

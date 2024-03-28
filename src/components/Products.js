@@ -30,8 +30,8 @@ const items = [
   {
     h4: `Historija društva `,
     h5: "Naučite više",
-    image: "/dom.jpg",
-    link: "/dom",
+    image: "/osnivaci.jpg",
+    link: "/historija",
   },
   {
     h4: `Orijentiring `,
