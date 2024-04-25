@@ -34,18 +34,36 @@ const Footer = () => {
       {/* Right side icons */}
       <Box mr={4} display="flex" flexDirection="column">
         <Box display="flex">
-          <IconButton onClick={() => handleIconClick("")}>
+          <IconButton
+            onClick={() =>
+              handleIconClick(
+                "https://www.facebook.com/profile.php?id=100057484306767"
+              )
+            }
+          >
             <FacebookIcon />
           </IconButton>
-          <IconButton onClick={() => handleIconClick("")}>
+          <IconButton
+            onClick={() =>
+              handleIconClick(
+                "https://www.instagram.com/psk_prijatelj_prirode?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"
+              )
+            }
+          >
             <InstagramIcon />
           </IconButton>
         </Box>
         <Box display="flex">
-          <IconButton onClick={() => handleIconClick("")}>
+          <IconButton
+            onClick={() => handleIconClick("mailto:planinar@bih.net.ba")}
+          >
             <EmailIcon />
           </IconButton>
-          <IconButton onClick={() => handleIconClick("")}>
+          <IconButton
+            onClick={() =>
+              handleIconClick("https://maps.app.goo.gl/5DTbPvNSyZLVzpBN6")
+            }
+          >
             <LocationOnIcon />
           </IconButton>
         </Box>

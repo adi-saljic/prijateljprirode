@@ -4,6 +4,7 @@ import { Box, Typography, Button } from "@mui/material";
 import Products from "../components/Products";
 import { useState } from "react";
 import "./home.css";
+import FormDialog from "../components/FormDialog";
 
 function Home() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -32,6 +33,12 @@ function Home() {
           </Button>
         </Box>
       </Box>
+      <FormDialog
+        open={isDialogOpen}
+        handleClose={() => {
+          setIsDialogOpen(false);
+        }}
+      />
       <Footer />
     </Box>
   );

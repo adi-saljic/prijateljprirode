@@ -32,10 +32,6 @@ function Header() {
 
   return (
     <>
-      <ContactDialog
-        open={isDialogOpen}
-        handleClose={() => setIsDialogOpen(false)}
-      />
       <StyledAppBar position="static">
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Link to="/" sx={{ textDecoration: "none" }}>
@@ -71,9 +67,6 @@ function Header() {
                     <ListItem onClick={handleDrawerClose}>
                       <Link to="/informacije">O nama</Link>
                     </ListItem>
-                    <ListItem onClick={handleDrawerClose}>
-                      <Link onClick={() => setIsDialogOpen(true)}>Kontakt</Link>
-                    </ListItem>
                     <ListItem>
                       <ArrowCircleLeftOutlinedIcon
                         onClick={handleDrawerClose}
@@ -92,9 +85,6 @@ function Header() {
                 </ListItem>
                 <ListItem>
                   <Link to="/informacije">Informacije</Link>
-                </ListItem>
-                <ListItem>
-                  <Link onClick={() => setIsDialogOpen(true)}>Kontakt</Link>
                 </ListItem>
               </List>
             </Box>
