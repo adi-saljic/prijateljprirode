@@ -7,6 +7,7 @@ import Skola from "./pages/Skola";
 import Slet from "./pages/Slet";
 import Orijentiring from "./pages/Orijentiring";
 import History from "./pages/History";
+import Info from "./pages/Info";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/slet" element={<Slet />} />
       <Route path="/orijentiring" element={<Orijentiring />} />
       <Route path="/historija" element={<History />} />
+      <Route path="/informacije" element={<Info />} />
     </Routes>
   );
 }

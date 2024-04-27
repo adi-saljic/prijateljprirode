@@ -17,7 +17,6 @@ const Footer = () => {
         backgroundColor: "#EEF8FC",
         color: "#0F8FA9",
         display: "flex",
-        justifyContent: "space-between",
         alignItems: "center",
         height: "100px",
 
@@ -25,14 +24,14 @@ const Footer = () => {
       }}
     >
       {/* Left side content */}
-      <Box padding="10px">
+      <Box padding="5px" width="80%">
         <Typography>PSK "Prijatelj prirode" Sarajevo</Typography>
-        <Paragraph>Adresa</Paragraph>
-        <Paragraph>Kontakt</Paragraph>
+        <Paragraph>Sjedište kluba: Behdžeta Mutevelića 12</Paragraph>
+        <Paragraph>Kontakt: 061035544</Paragraph>
       </Box>
 
       {/* Right side icons */}
-      <Box mr={4} display="flex" flexDirection="column">
+      <Box display="flex" flexDirection="column">
         <Box display="flex">
           <IconButton
             onClick={() =>

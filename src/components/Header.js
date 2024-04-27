@@ -65,7 +65,7 @@ function Header() {
                       <Link to="/">Početna</Link>
                     </ListItem>
                     <ListItem onClick={handleDrawerClose}>
-                      <Link to="/informacije">O nama</Link>
+                      <Link to="/informacije">Informacije</Link>
                     </ListItem>
                     <ListItem>
                       <ArrowCircleLeftOutlinedIcon
