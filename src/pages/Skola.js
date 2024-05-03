@@ -1,33 +1,49 @@
 import InfoPage from "./InfoPage";
 import { Box, Typography, Button } from "@mui/material";
+import React, { useEffect } from "react";
+import { getImage } from "./SerbrnaLija";
 
 const slides1 = [
   {
-    url: "/Skola/IspredDoma.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1usJgNPTEBEXnemFIoqUAB2gq2cFmYXd8/view?usp=drive_link"
+    ),
     caption: "",
   },
   {
-    url: "/Skola/cvorovi.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1aJma7I_gGQ-lYrdKXnMw6ltuICnWlC7F/view?usp=drive_link"
+    ),
     caption: "",
   },
   {
-    url: "/Skola/kolona.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1tT9LKyxjW5z9M6OUGLS2nLmcnq7VaAot/view?usp=drive_link"
+    ),
     caption: "",
   },
   {
-    url: "/Skola/stoni.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/17PHHGFmjaRvx8Kjk8cNSdrwBxHHLcBbg/view?usp=drive_link"
+    ),
     caption: "",
   },
   {
-    url: "/Skola/vrece.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1o0IRkeHtDEhe44nat-AOTkHPQ5FkdTxV/view?usp=drive_link"
+    ),
     caption: "",
   },
   {
-    url: "/Skola/kolona2.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1oSdKQrt4CafqinJu030uh6BlEYtm0kjC/view?usp=drive_link"
+    ),
     caption: "",
   },
   {
-    url: "/Skola/dron.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1Yp79uNq9Ma_P5rsD6OutsuGKn-Hw4Qo3/view?usp=drive_link"
+    ),
     caption: "",
   },
 ];
@@ -56,6 +72,9 @@ const texts1 = [
 ];
 
 function Skola() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <InfoPage

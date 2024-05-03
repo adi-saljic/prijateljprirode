@@ -5,6 +5,7 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { useMediaQuery } from "@mui/material";
 import "./home.css";
+
 const spanStyle = {
   padding: "20px",
   background: "#efefef",
@@ -37,6 +38,7 @@ function InfoPage({
 }) {
   const isLaptop = useMediaQuery("(min-width: 1024px)");
   const width = isLaptop ? "60%" : "80%";
+
   return (
     <>
       <Header />
@@ -138,9 +140,8 @@ function InfoPage({
               height="315"
               src={src}
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
               style={{
                 width: "100%", // Default width for all screen sizes
                 maxWidth: "560px", // Max width to prevent iframe from being too wide

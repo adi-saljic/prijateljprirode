@@ -1,64 +1,100 @@
 import InfoPage from "./InfoPage";
 import { Box, Typography, Button } from "@mui/material";
+import React, { useEffect } from "react";
+
+export const getImage = (rawURL: string) => {
+  const RAW_URL1 = rawURL.split("/d/");
+  const RAW_URL2 = RAW_URL1[1].split("/view");
+  const IMAGE_ID = RAW_URL2[0];
+  return `https://drive.google.com/thumbnail?id=${IMAGE_ID}&sz=w4000`;
+};
 
 const slides1 = [
   {
-    url: "/Lija/znacka.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1VaO-Qu6hFzpgRUaLM26ELrxWD5Y-cgG_/view?usp=drive_link"
+    ),
     caption: "Izgled značke",
   },
   {
-    url: "/Lija/KrvavacDaleko.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1-bIjKwBEy9vTFjPp0W3wiqWpD0XyGnBP/view?usp=drive_link"
+    ),
     caption: "Krvavac",
   },
   {
-    url: "/Lija/karta-rute.png",
+    url: getImage(
+      "https://drive.google.com/file/d/1Vza1aUAG3LJ17AxR6lV5eCgfl6FovMhL/view?usp=drive_link"
+    ),
     caption: "Karta rute",
   },
   {
-    url: "/Lija/Setnja.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1mWw6cKL1YBtv3fRxSmuRRV8xUFRGxmFy/view?usp=drive_link"
+    ),
     caption: "",
   },
 ];
 
 const slides2 = [
   {
-    url: "/Lija/Tusila.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1jHroWv5D-o3ZwhlM3wb_oUlKtgooUclv/view?usp=drive_link"
+    ),
     caption: "Kontrolna tačka 1: Tušila",
   },
   {
-    url: "/Lija/Vito.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1WGblR9nPED-vO9tl9vDCHgwxkmp6AJfd/view?usp=drive_link"
+    ),
     caption: "Kontrolna tačka 2: vrh Vito",
   },
   {
-    url: "/Lija/Drstva.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1zZoWg4WglUz4lx6dWEbBVYyXoImJY4Iu/view?usp=drive_link"
+    ),
     caption: "Kontrolna tačka 3: vrh Drstva",
   },
   {
-    url: "/Lija/bobovica.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1HyrAHSwDj3cMpVbRYTIJqF7ISuDL4Bhs/view?usp=drive_link"
+    ),
     caption: "Kontrolna tačka 4: selo Bobovica",
   },
   {
-    url: "/Lija/Kanjon.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1rE8DtNMr1-_0cj0dEhlUIz1PsI5dv84c/view?usp=drive_link"
+    ),
     caption: "Kontrolna tačka 5: Kanjon Rakitnice",
   },
   {
-    url: "/Lija/Lukomir.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/19A_h83BuZIV6yuPLIYydING0-D3FNUQz/view?usp=drive_link"
+    ),
     caption: "Kontrolna tačka 6: Lukomir",
   },
   {
-    url: "/Lija/Krvavac.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/13W-Ff6IauOF90QkXGVz3X4BnZOTtKsBh/view?usp=drive_link"
+    ),
     caption: "Kontrolna tačka 7: vrh Krvavac",
   },
   {
-    url: "/Lija/Sitnik.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1EBiJFeqB6tqUCKJlCo2p7v3NTuMyW0bI/view?usp=drive_link"
+    ),
     caption: "Kontrolna tačka 8: Planinarska kuća Sitnik",
   },
   {
-    url: "/Lija/Stanari.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/15Iw_bjGtI92PyjIWdfnyybcq0cNOFZth/view?usp=drive_link"
+    ),
     caption: "Kontrolna tačka 9: Planinaski dom Stanari",
   },
   {
-    url: "dom.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1_1YS2Zd-Ior8A_2uwULfh7z9pr04RMDK/view?usp=drive_link"
+    ),
     caption: "Kontrolna tačka 10: Finish u našem domu na Malom polju",
   },
 ];
@@ -148,6 +184,9 @@ const title = `"Srebrna lija"`;
 const sub = `Transferzala`;
 
 function SrebrnaLija() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <InfoPage

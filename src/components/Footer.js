@@ -19,12 +19,11 @@ const Footer = () => {
         display: "flex",
         alignItems: "center",
         height: "100px",
-
         width: "100%",
       }}
     >
       {/* Left side content */}
-      <Box padding="5px" width="80%">
+      <Box padding="5px" width="90%">
         <Typography>PSK "Prijatelj prirode" Sarajevo</Typography>
         <Paragraph>Sjedište kluba: Behdžeta Mutevelića 12</Paragraph>
         <Paragraph>Kontakt: 061035544</Paragraph>

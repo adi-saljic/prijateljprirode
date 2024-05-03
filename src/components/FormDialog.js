@@ -74,55 +74,49 @@ export default function FormDialog({ open, handleClose }) {
     Adresa stanovanja: ` +
       formData.address +
       `
-    JBMG: ` +
-      formData.jbmg +
-      `
     Zanimanje/zvanje: ` +
       formData.profession +
-      `
-    Section: ` +
-      formData.sections;
-    emailjs
-      .send(
-        "service_2vla5kt",
-        "template_zj76eli",
-        {
-          to_email: "adi.saljic.as@gmail.com",
-          subject: "Prijava novog člana",
-          message: message,
-        },
-        "PSf0ywhMhtFQX0Vwt"
-      )
-      .then((response) => {
-        console.log("Email sent:", response);
-        // Handle success
-        emailjs
-          .send(
-            "service_2vla5kt",
-            "template_m63hk7g",
-            {
-              to_email: formData.email,
-              subject: "",
-              message: "",
-              to_name: formData.name,
-            },
-            "PSf0ywhMhtFQX0Vwt"
-          )
-          .then((response) => {
-            console.log("Email sent:", response);
-            // Handle success
-            clearData();
-            handleClose();
-          })
-          .catch((error) => {
-            console.error("Error sending email:", error);
-            // Handle error
-          });
-      })
-      .catch((error) => {
-        console.error("Error sending email:", error);
-        // Handle error
-      });
+      emailjs
+        .send(
+          "service_2vla5kt",
+          "template_zj76eli",
+          {
+            to_email: "adi.saljic.as@gmail.com",
+            subject: "Prijava novog člana",
+            message: message,
+          },
+          "PSf0ywhMhtFQX0Vwt"
+        )
+        .then((response) => {
+          console.log("Email sent:", response);
+          // Handle success
+          emailjs
+            .send(
+              "service_2vla5kt",
+              "template_m63hk7g",
+              {
+                to_email: formData.email,
+                subject: "",
+                message: "",
+                to_name: formData.name,
+              },
+              "PSf0ywhMhtFQX0Vwt"
+            )
+            .then((response) => {
+              console.log("Email sent:", response);
+              // Handle success
+              clearData();
+              handleClose();
+            })
+            .catch((error) => {
+              console.error("Error sending email:", error);
+              // Handle error
+            });
+        })
+        .catch((error) => {
+          console.error("Error sending email:", error);
+          // Handle error
+        });
   }
   return (
     <Box>
@@ -200,29 +194,6 @@ export default function FormDialog({ open, handleClose }) {
                 onChange={handleChange}
                 fullWidth
                 required
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Typography>Jedinstveni matični broj*</Typography>
-              <Input
-                name="jbmg"
-                value={formData.jbmg}
-                onChange={handleChange}
-                fullWidth
-                required
-              />
-            </Grid>
-
-            <Grid item xs={12}>
-              <Typography>Sekcije u kojima je član aktivan</Typography>
-              <TextField
-                name="sections"
-                value={formData.sections}
-                onChange={handleChange}
-                fullWidth
-                multiline
-                rows={5}
-                variant="outlined"
               />
             </Grid>
             <Grid item xs={12}>

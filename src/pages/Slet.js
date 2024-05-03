@@ -1,40 +1,57 @@
 import InfoPage from "./InfoPage";
 import { Box, Typography, Button } from "@mui/material";
-
+import React, { useEffect } from "react";
+import { getImage } from "./SerbrnaLija";
 const slides1 = [
   {
-    url: "/Slet/dron.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1xnuoxmNRAlgfnzOELHbNozl4IH-uayIY/view?usp=drive_link"
+    ),
     caption: "",
   },
   {
-    url: "/Slet/helikopter.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/14_8KHsLSbP6O46TLzHqQ93zoKWH9O8hD/view?usp=drive_link"
+    ),
     caption: "",
   },
   {
-    url: "/Slet/postolje.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1c9J5vwyjX7Umdv4egguNFD-LjmgH7QqA/view?usp=drive_link"
+    ),
     caption: "",
   },
   {
-    url: "/Slet/pozadina.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/123xTkpSDnBXXf90F9p6SSk5y760CAXFC/view?usp=drive_link"
+    ),
     caption: "",
   },
 ];
 
 const slides2 = [
   {
-    url: "/Slet/penjanje.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/12iRtyHCFOVzGJw3FF80MzYiLHDryaptd/view?usp=drive_link"
+    ),
     caption: "",
   },
   {
-    url: "/Slet/ot.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1TRWKnaD_Hxo4mD-kSriaqE9cdB7DTuE3/view?usp=drive_link"
+    ),
     caption: "",
   },
   {
-    url: "/Slet/vrece.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1Nf1f83zezUf4rL1EZkqr80SsSuUmvzJg/view?usp=drive_link"
+    ),
     caption: "",
   },
   {
-    url: "/Slet/konopac.jpg",
+    url: getImage(
+      "https://drive.google.com/file/d/1qhYOaDMz_Ywfso67T4aoiyMc-TlUpAQz/view?usp=drive_link"
+    ),
     caption: "",
   },
 ];
@@ -66,6 +83,9 @@ const texts2 = [
 ];
 
 function Slet() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <InfoPage

@@ -1,41 +1,42 @@
 import InfoPage from "./InfoPage";
 import { Box, Typography, Button } from "@mui/material";
+import React, { useEffect } from "react";
 
 const slides1 = [
   {
-    url: "/Historija/osnivaci.jpg",
+    url: "https://drive.google.com/thumbnail?id=1TShPDydKwzoP5IlShsOAsILx4-wFRpBD&sz=w4000",
     caption: `Osnivači "Prijatelj prirode" u Sarajevu 1905. godine`,
   },
   {
-    url: "/Historija/Boracko1926godina.jpg",
+    url: "https://drive.google.com/thumbnail?id=1BB7-7UGso4Y56acR4sqQot3dfz6FOmi4&sz=w4000",
     caption: `Izgradnja planinarske kuće na Boračkom jezeru 1926. godine`,
   },
   {
-    url: "/Historija/IzletNaMPolje.jpg",
+    url: "https://drive.google.com/thumbnail?id=1ee4rvzFuHovXfuJYDHw5uMoYCA88E_qU&sz=w4000",
     caption: `Izlet na Malo polje`,
   },
   {
-    url: "/Historija/Staridom.jpg",
+    url: "https://drive.google.com/thumbnail?id=1djLUkJzaG3HTKaPTT7Vy1F3xM9_Egxtn&sz=w4000",
     caption: `Kako je prije izgledao dom na Malom polju`,
   },
   {
-    url: "/Historija/Alpe.jpg",
+    url: "https://drive.google.com/thumbnail?id=1uIqwacWan9aKznQe-z0_B-Zfo4RkPnTz&sz=w4000",
     caption: ``,
   },
   {
-    url: "/Historija/Alpe59.jpg",
+    url: "https://drive.google.com/thumbnail?id=1pScsMp3iLPxUz8-k-JsORSjSkYbLlrbM&sz=w4000",
     caption: ``,
   },
   {
-    url: "/Historija/Igmanskimars70.jpg",
+    url: "https://drive.google.com/thumbnail?id=1Ie7aoIJ1wpRNFrJGsDU54S7WrYnHQl9T&sz=w4000",
     caption: ``,
   },
   {
-    url: "/Historija/Slide5.jpg",
+    url: "https://drive.google.com/thumbnail?id=131VgmFGqiwvrfebxY--4U8s_ShatIFJg&sz=w4000",
     caption: ``,
   },
   {
-    url: "/Historija/Slide12.jpg",
+    url: "https://drive.google.com/thumbnail?id=1--ko6-lfHkvcXbDamj0fHt54Srf1TDyZ&sz=w4000",
     caption: ``,
   },
 ];
@@ -126,6 +127,10 @@ const sub = `Od početka do danas`;
 const text = ` `;
 
 function History() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <InfoPage title={title} sub={sub} texts1={texts1} slides1={slides1} />

@@ -19,8 +19,8 @@ function Home() {
       <Products />
 
       <Box id="banner">
-        <Box class="bg-image"></Box>
-        <Box class="bg-text">
+        <Box className="bg-image"></Box>
+        <Box className="bg-text">
           <Typography variant="h4">
             Ostvarite mnoge pogodnosti tako što ćete postati član našeg društva
           </Typography>

@@ -1,31 +1,32 @@
 import InfoPage from "./InfoPage";
 import { Box, Typography, Button } from "@mui/material";
+import React, { useEffect } from "react";
 
 const slides1 = [
   {
-    url: "/Orijentiring/ekipa23.jpg",
+    url: "https://drive.google.com/thumbnail?id=1qp3noralGTFom8Gl-S8r817UTXZaemSP&sz=w4000",
     caption:
       "Reprezentacije Bosne i Hercegovine na Prvenstvu jugoistočne Evrope Igman 2023",
   },
   {
-    url: "/Orijentiring/igman.png",
+    url: "https://drive.google.com/thumbnail?id=1EqlCrpC8mWP5x9LM-WM4M6CWT5mNiKLX&sz=w4000",
     caption: "Orijentiring karta Velikog polja",
   },
   {
-    url: "/Orijentiring/medalje.jpg",
+    url: "https://drive.google.com/thumbnail?id=1KQtaf-b6L89guPyTC4-LNsRhmBxYxAfg&sz=w4000",
     caption: "Zlatna ekipa, državni prvaci",
   },
   {
-    url: "/Orijentiring/andrea.jpg",
+    url: "https://drive.google.com/thumbnail?id=1kiTHXQ86pNNGRSrkRzJsv8rVaJhhSVPD&sz=w4000",
     caption: "",
   },
 
   {
-    url: "/Orijentiring/lamija.jpg",
+    url: "https://drive.google.com/thumbnail?id=1WZVZ2FhOLIqfpc9cUAzS0EKsHVQXl5n2&sz=w4000",
     caption: "",
   },
   {
-    url: "/Orijentiring/ekipa.jpg",
+    url: "https://drive.google.com/thumbnail?id=1WYNRpBqLkbMxHhoSiXw0Uo3yfkdPsEyh&sz=w4000",
     caption: "",
   },
 ];
@@ -83,6 +84,9 @@ const title = `Orijentiring`;
 const sub = `Prvo misli pa onda trči`;
 
 function Orijentiring() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <InfoPage title={title} sub={sub} texts1={texts1} slides1={slides1} />

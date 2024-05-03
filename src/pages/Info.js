@@ -10,6 +10,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import React, { useEffect } from "react";
 
 const center = {
   lat: -3.745,
@@ -49,6 +50,9 @@ const rows = [
 ];
 
 function Info() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const imageStyle = {
     width: "40%", // Set the maximum width to 100% of its container
     height: "100%", // Allow the height to adjust proportionally
@@ -84,9 +88,9 @@ function Info() {
     <Box>
       <Header />
 
-      <Box display="flex" justifyContent="space-between">
+      <Box display="flex" justifyContent="center">
         <Box
-          width={isMobile ? "80%" : "50%"}
+          width={isMobile ? "80%" : "70%"}
           margin={isMobile ? "20px" : "50px"}
         >
           <Typography variant="h5">Informacije </Typography>

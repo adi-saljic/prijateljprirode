@@ -3,66 +3,66 @@ import { Box, Typography, Button } from "@mui/material";
 
 const slides1 = [
   {
-    url: "/Dom/blizu.jpg",
+    url: "https://drive.google.com/thumbnail?id=1ukoAmbY3KnAoGPPVsC14dHI7ZxI9_H-D&sz=w4000",
     caption: "",
   },
   {
-    url: "/Dom/maloPolje.jpg",
+    url: "https://drive.google.com/thumbnail?id=18VsaZmxl0PK5UrMeLyOeor_SFGxjBNTP&sz=w4000",
     caption: "",
   },
   {
-    url: "/Dom/odozgo.jpg",
+    url: "https://drive.google.com/thumbnail?id=1M4CtUSye7x9t2SsTnzYxNQhVaam_IjBM&sz=w4000",
     caption: "",
   },
   {
-    url: "/Dom/suma.jpg",
+    url: "https://drive.google.com/thumbnail?id=1R388q_XYRVkPE9GWp_QTxBs0Tqm2oP4N&sz=w4000",
     caption: "",
   },
   {
-    url: "/Dom/daleko.jpg",
+    url: "https://drive.google.com/thumbnail?id=1XVRG9xYRQkMBKoCOZXfSKXCBFh0n7rTT&sz=w4000",
     caption: "",
   },
 ];
 
 const slides2 = [
   {
-    url: "/Dom/sala1.jpg",
+    url: "https://drive.google.com/thumbnail?id=1l5oq3G_ZixnLkz6qWlkbI5kTxjAZWcPc&sz=w4000",
     caption: "Kamin sala u prizemlju",
   },
   {
-    url: "/Dom/sala2.jpg",
+    url: "https://drive.google.com/thumbnail?id=1axxKHlkVJzBJPaaSi62Z6QV3u6mnfClz&sz=w4000",
     caption: "Kamin sala u prizemlju",
   },
   {
-    url: "/Dom/sprat0.jpg",
+    url: "https://drive.google.com/thumbnail?id=1PB1eFMXhvuH0j_uzr0eTYjpE6jyal4yT&sz=w4000",
     caption: "",
   },
   {
-    url: "/Dom/soba1.jpg",
+    url: "https://drive.google.com/thumbnail?id=11buihTDj88CAoq-tdSe271ws9X9gUoIv&sz=w4000",
     caption: "Soba broj 1",
   },
   {
-    url: "/Dom/soba2.jpg",
+    url: "https://drive.google.com/thumbnail?id=1LFHPDOtzQWPtg5ND_EBNTlzDSy2xG7VD&sz=w4000",
     caption: "Soba broj 2",
   },
   {
-    url: "/Dom/sprat1.jpg",
+    url: "https://drive.google.com/thumbnail?id=1l1uUjNh9e-z0RZVvr5MaQybwC7ZdNFah&sz=w4000",
     caption: "Prostor na prvom spratu",
   },
   {
-    url: "/Dom/stepenice.jpg",
+    url: "https://drive.google.com/thumbnail?id=1CgYeceJ81th0OOmyvtF1x3C1GyqXGUvx&sz=w4000",
     caption: "",
   },
   {
-    url: "/Dom/soba4.jpg",
+    url: "https://drive.google.com/thumbnail?id=1ejaF-Q6zky0PhSJXCKOCLHGT_f_R4C9p&sz=w4000",
     caption: "Soba broj 4",
   },
   {
-    url: "/Dom/soba5.jpg",
+    url: "https://drive.google.com/thumbnail?id=1Jc30_HwYTIOvpB7tWqcEhT1GHW57lMsX&sz=w4000",
     caption: "Soba broj 5",
   },
   {
-    url: "/Dom/soba6.jpg",
+    url: "https://drive.google.com/thumbnail?id=1h3IBMcd1olzniFCMWijdrxLfUaZXnWTo&sz=w4000",
     caption: "Soba broj 6",
   },
 ];

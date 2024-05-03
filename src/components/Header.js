@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { StyledAppBar, StyledDrawer } from "./styledComponents";
-import ContactDialog from "./ContactDialog";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
