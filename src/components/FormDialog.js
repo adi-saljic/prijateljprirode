@@ -57,8 +57,7 @@ export default function FormDialog({ open, handleClose }) {
       return; // Stop submission if email is invalid
     }
     const message =
-      `
-    Ime i prezime: ` +
+      `Ime i prezime: ` +
       formData.name +
       " " +
       formData.lastname +
@@ -73,48 +72,48 @@ export default function FormDialog({ open, handleClose }) {
       formData.address +
       `
     Zanimanje/zvanje: ` +
-      formData.profession +
-      emailjs
-        .send(
-          "service_2vla5kt",
-          "template_zj76eli",
-          {
-            to_email: "adi.saljic.as@gmail.com",
-            subject: "Prijava novog člana",
-            message: message,
-          },
-          "PSf0ywhMhtFQX0Vwt"
-        )
-        .then((response) => {
-          console.log("Email sent:", response);
-          // Handle success
-          emailjs
-            .send(
-              "service_2vla5kt",
-              "template_m63hk7g",
-              {
-                to_email: formData.email,
-                subject: "",
-                message: "",
-                to_name: formData.name,
-              },
-              "PSf0ywhMhtFQX0Vwt"
-            )
-            .then((response) => {
-              console.log("Email sent:", response);
-              // Handle success
-              clearData();
-              handleClose();
-            })
-            .catch((error) => {
-              console.error("Error sending email:", error);
-              // Handle error
-            });
-        })
-        .catch((error) => {
-          console.error("Error sending email:", error);
-          // Handle error
-        });
+      formData.profession;
+    emailjs
+      .send(
+        "service_2vla5kt",
+        "template_zj76eli",
+        {
+          to_email: "adi.saljic.as@gmail.com",
+          subject: "Prijava novog člana",
+          message: message,
+        },
+        "PSf0ywhMhtFQX0Vwt"
+      )
+      .then((response) => {
+        console.log("Email sent:", response);
+        // Handle success
+        emailjs
+          .send(
+            "service_2vla5kt",
+            "template_m63hk7g",
+            {
+              to_email: formData.email,
+              subject: "",
+              message: "",
+              to_name: formData.name,
+            },
+            "PSf0ywhMhtFQX0Vwt"
+          )
+          .then((response) => {
+            console.log("Email sent:", response);
+            // Handle success
+            clearData();
+            handleClose();
+          })
+          .catch((error) => {
+            console.error("Error sending email:", error);
+            // Handle error
+          });
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        // Handle error
+      });
   }
   return (
     <Box>
