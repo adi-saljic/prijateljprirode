@@ -1,5 +1,5 @@
 import InfoPage from "./InfoPage";
-import { Box, Typography, Button } from "@mui/material";
+
 import React, { useEffect } from "react";
 
 const slides1 = [
@@ -124,7 +124,6 @@ const texts1 = [
 
 const title = `Historija`;
 const sub = `Od početka do danas`;
-const text = ` `;
 
 function History() {
   useEffect(() => {

@@ -1,5 +1,5 @@
 import InfoPage from "./InfoPage";
-import { Box, Typography, Button } from "@mui/material";
+
 import React, { useEffect } from "react";
 import { getImage } from "./SerbrnaLija";
 

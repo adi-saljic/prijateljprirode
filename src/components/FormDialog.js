@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 import {
   Box,
@@ -11,10 +11,8 @@ import {
   DialogTitle,
   Grid,
   Input,
-  TextField,
   Typography,
 } from "@mui/material";
-import axios from "axios";
 
 export default function FormDialog({ open, handleClose }) {
   const [formData, setFormData] = useState({

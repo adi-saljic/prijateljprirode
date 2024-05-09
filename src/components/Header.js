@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Box,
-  List,
-  ListItem,
-  Button,
-  Drawer,
-} from "@mui/material";
+import { Toolbar, IconButton, Box, List, ListItem } from "@mui/material";
 import { Link } from "react-router-dom";
 import { StyledAppBar, StyledDrawer } from "./styledComponents";
 
@@ -16,7 +7,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
 
 function Header() {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const handleDrawerOpen = () => {

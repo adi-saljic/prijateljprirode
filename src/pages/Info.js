@@ -1,8 +1,7 @@
 import { Box, Typography } from "@mui/material";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import { useCallback, useState } from "react";
+import { useEffect } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -10,16 +9,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import React, { useEffect } from "react";
 
-const center = {
-  lat: -3.745,
-  lng: -38.523,
-};
-const containerStyle = {
-  width: "400px",
-  height: "400px",
-};
 function createData(name, spavanje, polu_pansion, pansion) {
   if (name === "Članovi planinarskih organizacija") {
     spavanje = "";
@@ -53,36 +43,7 @@ function Info() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const imageStyle = {
-    width: "40%", // Set the maximum width to 100% of its container
-    height: "100%", // Allow the height to adjust proportionally
-    borderRadius: "8px", // Example: Add border-radius
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Example: Add a subtle box shadow
-    margin: "50px 50px 10px ",
-  };
-  const imageStyleMob = {
-    borderRadius: "8px", // Example: Add border-radius
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Example: Add a subtle box shadow
-    margin: "10px 20px 10px 20px",
-  };
   const isMobile = window.innerWidth <= 600;
-  const { isLoaded } = useJsApiLoader({
-    id: "google-map-script",
-    googleMapsApiKey: "AIzaSyC-wn_VtI6Untg3sMU1iGsARcEUI7I6r5g",
-  });
-  const [map, setMap] = useState(null);
-
-  const onLoad = useCallback(function callback(map) {
-    // This is just an example of getting and using the map instance!!! don't just blindly copy!
-    const bounds = new window.google.maps.LatLngBounds(center);
-    map.fitBounds(bounds);
-
-    setMap(map);
-  }, []);
-
-  const onUnmount = useCallback(function callback(map) {
-    setMap(null);
-  }, []);
 
   return (
     <Box>

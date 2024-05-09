@@ -1,4 +1,4 @@
-import { AppBar, Box, Drawer, Typography } from "@mui/material";
+import { AppBar, Drawer, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const StyledAppBar = styled(AppBar)(() => ({

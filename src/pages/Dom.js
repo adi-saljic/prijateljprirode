@@ -1,5 +1,4 @@
 import InfoPage from "./InfoPage";
-import { Box, Typography, Button } from "@mui/material";
 
 const slides1 = [
   {

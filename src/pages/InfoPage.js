@@ -1,16 +1,10 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { useMediaQuery } from "@mui/material";
 import "./home.css";
-
-const spanStyle = {
-  padding: "20px",
-  background: "#efefef",
-  color: "#000000",
-};
 
 const divStyle = {
   display: "flex",
