@@ -12,7 +12,7 @@ const divStyle = {
   justifyContent: "center",
   backgroundSize: "cover",
   height: "400px",
-  backgroundSize: "contain",
+
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
   margin: "10px",

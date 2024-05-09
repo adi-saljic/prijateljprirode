@@ -127,17 +127,15 @@ function Info() {
               </TableHead>
               <TableBody>
                 <TableRow>
-                  <TableCell align="right">
-                    Za grupu (više od 6 članova)
-                  </TableCell>
+                  <TableCell>Za grupu (više od 6 članova)</TableCell>
                   <TableCell align="right">15 KM</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell align="right">Sać</TableCell>
+                  <TableCell>Sać</TableCell>
                   <TableCell align="right">15 KM</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell align="right">Roštilj</TableCell>
+                  <TableCell>Roštilj</TableCell>
                   <TableCell align="right">20 KM</TableCell>
                 </TableRow>
               </TableBody>
@@ -156,9 +154,7 @@ function Info() {
               </TableHead>
               <TableBody>
                 <TableRow>
-                  <TableCell align="right">
-                    Za grupu do 6 članova sa ćumurom
-                  </TableCell>
+                  <TableCell>Za grupu do 6 članova sa ćumurom</TableCell>
                   <TableCell align="right">10 KM</TableCell>
                 </TableRow>
               </TableBody>
@@ -177,11 +173,11 @@ function Info() {
               </TableHead>
               <TableBody>
                 <TableRow>
-                  <TableCell align="right">Za članove društva</TableCell>
+                  <TableCell>Za članove društva</TableCell>
                   <TableCell align="right">1 KM</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell align="right">Ostali</TableCell>
+                  <TableCell>Ostali</TableCell>
                   <TableCell align="right">2 KM</TableCell>
                 </TableRow>
               </TableBody>
