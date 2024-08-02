@@ -18,7 +18,7 @@ function Home() {
       </Box>
       <Products />
 
-      <Box id="banner">
+      {/* <Box id="banner">
         <Box className="bg-image"></Box>
         <Box className="bg-text">
           <Typography variant="h4">
@@ -32,7 +32,7 @@ function Home() {
             Postani član
           </Button>
         </Box>
-      </Box>
+      </Box> */}
       <FormDialog
         open={isDialogOpen}
         handleClose={() => {
