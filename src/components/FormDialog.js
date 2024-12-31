@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
-
 import emailjs from "@emailjs/browser";
-
 import {
   Box,
   Dialog,
@@ -13,6 +11,7 @@ import {
   Input,
   Typography,
 } from "@mui/material";
+import ReCAPTCHA from "react-google-recaptcha"; // Import reCAPTCHA
 
 export default function FormDialog({ open, handleClose }) {
   const [formData, setFormData] = useState({
@@ -20,59 +19,61 @@ export default function FormDialog({ open, handleClose }) {
     lastname: "",
     phone: "",
     email: "",
-    jbmg: "",
     address: "",
-    profession: "",
-    sections: "",
   });
   const [validEmail, setValidEmail] = useState(true);
+  const [recaptchaValue, setRecaptchaValue] = useState(null); // State to store reCAPTCHA value
+
   const clearData = () => {
     setFormData({
       name: "",
       lastname: "",
       phone: "",
       email: "",
-      jbmg: "",
       address: "",
-      profession: "",
-      sections: "",
     });
+    setRecaptchaValue(null); // Clear reCAPTCHA value on reset
   };
+
   const isValidEmail = (email) => {
-    // Regular expression for validating email format
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   };
 
   const handleChange = (e) => {
-    // Update the formData state when input fields change
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleRecaptchaChange = (value) => {
+    setRecaptchaValue(value); // Update reCAPTCHA value
+  };
+
   function handleSubmit(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
+
     if (!isValidEmail(formData.email)) {
       setValidEmail(false);
-      return; // Stop submission if email is invalid
+      return;
     }
+
+    if (!recaptchaValue) {
+      alert("Please complete the reCAPTCHA verification.");
+      return; // Stop submission if reCAPTCHA is not verified
+    }
+
     const message =
       `Ime i prezime: ` +
       formData.name +
       " " +
       formData.lastname +
-      `
-    Email: ` +
+      `\nEmail: ` +
       formData.email +
-      `
-    Broj telefona: ` +
+      `\nBroj telefona: ` +
       formData.phone +
-      `
-    Adresa stanovanja: ` +
-      formData.address +
-      `
-    Zanimanje/zvanje: ` +
-      formData.profession;
+      `\nAdresa stanovanja: ` +
+      formData.address;
+
     emailjs
       .send(
         "service_2vla5kt",
@@ -86,7 +87,6 @@ export default function FormDialog({ open, handleClose }) {
       )
       .then((response) => {
         console.log("Email sent:", response);
-        // Handle success
         emailjs
           .send(
             "service_2vla5kt",
@@ -101,29 +101,21 @@ export default function FormDialog({ open, handleClose }) {
           )
           .then((response) => {
             console.log("Email sent:", response);
-            // Handle success
             clearData();
             handleClose();
           })
           .catch((error) => {
             console.error("Error sending email:", error);
-            // Handle error
           });
       })
       .catch((error) => {
         console.error("Error sending email:", error);
-        // Handle error
       });
   }
+
   return (
     <Box>
-      <Dialog
-        open={open}
-        onClose={() => {
-          handleClose();
-          clearData();
-        }}
-      >
+      <Dialog open={open} onClose={() => { handleClose(); clearData(); }}>
         <DialogTitle>{"ČLANSKI OBRAZAC"}</DialogTitle>
         <DialogContent>
           <Grid container spacing={2}>
@@ -183,16 +175,7 @@ export default function FormDialog({ open, handleClose }) {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <Typography>Zanimanje/zvanje*</Typography>
-              <Input
-                name="profession"
-                value={formData.profession}
-                onChange={handleChange}
-                fullWidth
-                required
-              />
-            </Grid>
+
             <Grid item xs={12}>
               <Typography>Saglasnost</Typography>
               <Typography>
@@ -216,15 +199,17 @@ export default function FormDialog({ open, handleClose }) {
                 društvu/klubu učestvujem na vlastitu odgovornost.
               </Typography>
             </Grid>
+            <Grid item xs={12}>
+              <Typography>Potvrda</Typography>
+              <ReCAPTCHA
+                sitekey="6LcjsqoqAAAAAID-ofaJ1OwRZlb9r9UZyeXwjKQu" // Replace with your reCAPTCHA site key
+                onChange={handleRecaptchaChange} // Set callback function for when reCAPTCHA is completed
+              />
+            </Grid>
           </Grid>
         </DialogContent>
         <DialogActions>
-          <Button
-            onClick={() => {
-              handleClose();
-              clearData();
-            }}
-          >
+          <Button onClick={() => { handleClose(); clearData(); }}>
             Cancel
           </Button>
           <Button
@@ -234,9 +219,9 @@ export default function FormDialog({ open, handleClose }) {
                 formData.name !== "" &&
                 formData.lastname !== "" &&
                 formData.phone !== "" &&
-                formData.adress !== "" &&
-                formData.profession !== "" &&
-                formData.email !== ""
+                formData.address !== "" &&
+                formData.email !== "" &&
+                recaptchaValue // Ensure reCAPTCHA is completed
               )
             }
           >

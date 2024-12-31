@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Products from "../components/Products";
 import { useState } from "react";
 import "./home.css";
@@ -18,7 +18,7 @@ function Home() {
       </Box>
       <Products />
 
-      {/* <Box id="banner">
+      <Box id="banner">
         <Box className="bg-image"></Box>
         <Box className="bg-text">
           <Typography variant="h4">
@@ -32,7 +32,7 @@ function Home() {
             Postani član
           </Button>
         </Box>
-      </Box> */}
+      </Box>
       <FormDialog
         open={isDialogOpen}
         handleClose={() => {
