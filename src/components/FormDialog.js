@@ -57,10 +57,7 @@ export default function FormDialog({ open, handleClose }) {
       return;
     }
 
-    if (!recaptchaValue) {
-      alert("Please complete the reCAPTCHA verification.");
-      return; // Stop submission if reCAPTCHA is not verified
-    }
+
 
     const message =
       `Ime i prezime: ` +
@@ -94,7 +91,7 @@ export default function FormDialog({ open, handleClose }) {
             {
               to_email: formData.email,
               subject: "",
-              message: "",
+              message: message,
               to_name: formData.name,
             },
             "PSf0ywhMhtFQX0Vwt"
@@ -221,7 +218,8 @@ export default function FormDialog({ open, handleClose }) {
                 formData.phone !== "" &&
                 formData.address !== "" &&
                 formData.email !== "" &&
-                recaptchaValue // Ensure reCAPTCHA is completed
+                recaptchaValue
+
               )
             }
           >
