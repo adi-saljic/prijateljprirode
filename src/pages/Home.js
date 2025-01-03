@@ -16,8 +16,6 @@ function Home() {
           <Typography variant="h4" style={{ textAlign: "center" }}></Typography>
         </Box>
       </Box>
-      <Products />
-
       <Box id="banner">
         <Box className="bg-image"></Box>
         <Box className="bg-text">
@@ -33,6 +31,9 @@ function Home() {
           </Button>
         </Box>
       </Box>
+      <Products />
+
+      
       <FormDialog
         open={isDialogOpen}
         handleClose={() => {
