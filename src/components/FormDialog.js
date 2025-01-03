@@ -73,10 +73,10 @@ export default function FormDialog({ open, handleClose }) {
 
     emailjs
       .send(
-        "service_2vla5kt",
-        "template_zj76eli",
+        "service_fnguvo3",
+        "template_60apyh4",
         {
-          to_email: "adi.saljic.as@gmail.com",
+          to_email: "prijateljprirodeprijava@gmail.com",
           subject: "Prijava novog člana",
           message: message,
         },
@@ -86,8 +86,8 @@ export default function FormDialog({ open, handleClose }) {
         console.log("Email sent:", response);
         emailjs
           .send(
-            "service_2vla5kt",
-            "template_m63hk7g",
+            "service_fnguvo3",
+            "template_rb7wxnj",
             {
               to_email: formData.email,
               subject: "",
