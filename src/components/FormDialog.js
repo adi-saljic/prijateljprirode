@@ -11,7 +11,7 @@ import {
   Input,
   Typography,
 } from "@mui/material";
-import ReCAPTCHA from "react-google-recaptcha"; // Import reCAPTCHA
+import ReCAPTCHA from "react-google-recaptcha"; 
 
 export default function FormDialog({ open, handleClose }) {
   const [formData, setFormData] = useState({
@@ -71,30 +71,30 @@ export default function FormDialog({ open, handleClose }) {
       `\nAdresa stanovanja: ` +
       formData.address;
 
-    emailjs
+      emailjs
       .send(
-        "service_2vla5kt",
-        "template_zj76eli",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID1,
         {
-          to_email: "adi.saljic.as@gmail.com",
+          to_email: "prijateljprirodeprijava@gmail.com",
           subject: "Prijava novog člana",
           message: message,
         },
-        "PSf0ywhMhtFQX0Vwt"
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
       .then((response) => {
         console.log("Email sent:", response);
         emailjs
           .send(
-            "service_2vla5kt",
-            "template_m63hk7g",
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID2,
             {
               to_email: formData.email,
               subject: "",
               message: message,
               to_name: formData.name,
             },
-            "PSf0ywhMhtFQX0Vwt"
+            process.env.REACT_APP_EMAILJS_USER_ID
           )
           .then((response) => {
             console.log("Email sent:", response);
@@ -108,6 +108,7 @@ export default function FormDialog({ open, handleClose }) {
       .catch((error) => {
         console.error("Error sending email:", error);
       });
+    
   }
 
   return (
@@ -217,8 +218,7 @@ export default function FormDialog({ open, handleClose }) {
                 formData.lastname !== "" &&
                 formData.phone !== "" &&
                 formData.address !== "" &&
-                formData.email !== "" &&
-                recaptchaValue
+                formData.email !== ""
 
               )
             }
