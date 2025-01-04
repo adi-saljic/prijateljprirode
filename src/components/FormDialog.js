@@ -218,7 +218,8 @@ export default function FormDialog({ open, handleClose }) {
                 formData.lastname !== "" &&
                 formData.phone !== "" &&
                 formData.address !== "" &&
-                formData.email !== ""
+                formData.email !== "" &&
+                recaptchaValue
 
               )
             }
