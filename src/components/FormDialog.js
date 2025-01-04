@@ -138,7 +138,7 @@ export default function FormDialog({ open, handleClose }) {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Typography>Adresa stanovanje*</Typography>
+              <Typography>Adresa stanovanja*</Typography>
               <Input
                 name="address"
                 value={formData.address}
